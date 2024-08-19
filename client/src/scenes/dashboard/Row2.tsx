@@ -4,7 +4,7 @@ import FlexBetween from '@/components/FlexBetween';
 import { useGetKpisQuery, useGetProductsQuery } from '@/state/api'
 import { Box, Typography, useTheme } from "@mui/material";
 import { useMemo } from 'react';
-import { ResponsiveContainer, CartesianGrid, LineChart, XAxis, YAxis, Tooltip, Legend, Line, PieChart, Pie, Cell, ScatterChart, Scatter, ZAxis } from 'recharts'
+import { ResponsiveContainer, CartesianGrid, LineChart, XAxis, YAxis, Tooltip, Line, PieChart, Pie, Cell, ScatterChart, Scatter, ZAxis } from 'recharts'
 
 const pieData = [
     { name: "Group A", value: 600 },
@@ -116,7 +116,7 @@ const Row2 = () => {
                             paddingAngle={5}
                             dataKey="value"
                         >
-                            {pieData.map((entry, index) => (
+                            {pieData.map((_entry, index) => (
                                 <Cell key={`cell-${index}`} fill={pieColor[index]} />
                             ))}
                         </Pie>
